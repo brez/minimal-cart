@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#
+# products.yml
+# This file contains product rule information
+#
+# (c)2007 ENDAX, ALL RIGHTS RESERVED.
+
+first:
+  id: 1
+  name: 'test 1'
+  byline: 'byline'
+  description: 'description 1'
+  price: 10
+  weight: 2
+
+second:
+  id: 2
+  name: 'test 2'
+  byline: 'byline'
+  description: 'description 2'
+  price: 15
+  weight: 10
+
+third:
+  id: 3
+  name: 'test 3'
+  byline: 'byline'
+  description: 'description 2'
+  price: 11
+  weight: 5
+

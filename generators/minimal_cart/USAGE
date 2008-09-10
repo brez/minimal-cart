@@ -1,0 +1,3 @@
+# See LICENSE file in the root for details
+Linux: ./script/generate minimal_cart MinimalCart
+Windows:    ruby script/generate minimal_cart MinimalCart

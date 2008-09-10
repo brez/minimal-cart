@@ -1,0 +1,319 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#
+# shipping_rates.yml
+# This file contains shipping rate rule information
+#
+# (c)2007 ENDAX, ALL RIGHTS RESERVED.
+
+rule1:
+  id: 1
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 0 
+  to_weight: 1.00
+  rate: 8.5
+  country_group: 1
+
+rule2:
+  id: 2
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 1.10 
+  to_weight: 1.50
+  rate: 9.5
+  country_group: 1
+
+rule3:
+  id: 3
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 1.51 
+  to_weight: 2.00
+  rate: 11.5
+  country_group: 1
+
+rule4:
+  id: 4
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 2.10 
+  to_weight: 2.50
+  rate: 12.75
+  country_group: 1
+
+rule5:
+  id: 5
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 2.51 
+  to_weight: 3.00
+  rate: 14.75
+  country_group: 1
+
+rule6:
+  id: 6
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 3.10 
+  to_weight: 3.50
+  rate: 16.75
+  country_group: 1
+
+rule7:
+  id: 7
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 3.51 
+  to_weight: 4.00
+  rate: 19
+  country_group: 1
+
+rule8:
+  id: 8
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 4.10 
+  to_weight: 5.00
+  rate: 16
+  country_group: 1
+
+rule9:
+  id: 9
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 5.10 
+  to_weight: 6.00
+  rate: 16.6
+  country_group: 1
+
+rule10:
+  id: 10
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 6.10 
+  to_weight: 7.00
+  rate: 17.4
+  country_group: 1
+
+rule11:
+  id: 11
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 7.10 
+  to_weight: 8.00
+  rate: 18.2
+  country_group: 1
+
+rule12:
+  id: 12
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 8.10 
+  to_weight: 9.00
+  rate: 18.7
+  country_group: 1
+
+rule13:
+  id: 13
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 9.10 
+  to_weight: 10.00
+  rate: 19.25
+  country_group: 1
+
+rule14:
+  id: 14
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 0 
+  to_weight: 1.00
+  rate: 10.5
+  country_group: 3
+
+rule15:
+  id: 15
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 1.10 
+  to_weight: 1.50
+  rate: 12.75
+  country_group: 3
+
+rule16:
+  id: 96
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 1.51 
+  to_weight: 2.00
+  rate: 15.75
+  country_group: 3
+
+rule17:
+  id: 97
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 2.10 
+  to_weight: 2.50
+  rate: 19
+  country_group: 3
+
+rule18:
+  id: 18
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 2.51 
+  to_weight: 3.00
+  rate: 22.25
+  country_group: 3
+
+rule19:
+  id: 19
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 3.10 
+  to_weight: 3.50
+  rate: 24.25
+  country_group: 3
+
+rule20:
+  id: 100
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 3.51 
+  to_weight: 4.00
+  rate: 27.5
+  country_group: 3
+
+rule21:
+  id: 21
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 4.10 
+  to_weight: 5.00
+  rate: 24.25
+  country_group: 3
+
+rule22:
+  id: 22
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 5.10 
+  to_weight: 6.00
+  rate: 26.35
+  country_group: 3
+
+rule23:
+  id: 23
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 6.10 
+  to_weight: 7.00
+  rate: 28.45
+  country_group: 3
+
+rule24:
+  id: 24
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 7.10 
+  to_weight: 8.00
+  rate: 30.55
+  country_group: 3
+
+rule25:
+  id: 25
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 8.10 
+  to_weight: 9.00
+  rate: 32.65
+  country_group: 3
+
+rule26:
+  id: 26
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 9.10 
+  to_weight: 10.00
+  rate: 34.5
+  country_group: 3
+
+rule27:
+  id: 27
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 0 
+  to_weight: 1.00
+  rate: 11.5
+  country_group: 4
+
+rule28:
+  id: 28
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 1.10 
+  to_weight: 1.50
+  rate: 13.75
+  country_group: 4
+
+rule29:
+  id: 29
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 1.51 
+  to_weight: 2.00
+  rate: 16.75
+  country_group: 4
+
+rule30:
+  id: 30
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 2.10 
+  to_weight: 2.50
+  rate: 20
+  country_group: 4
+
+rule31:
+  id: 31
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 2.51 
+  to_weight: 3.00
+  rate: 23.25
+  country_group: 4
+
+rule32:
+  id: 32
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 3.10 
+  to_weight: 3.50
+  rate: 25.25
+  country_group: 4
+
+rule33:
+  id: 33
+  method: 'USPS GLOBAL PRIORITY MAIL'
+  from_weight: 3.51 
+  to_weight: 4.00
+  rate: 28.5
+  country_group: 4
+
+rule34:
+  id: 34
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 4.10 
+  to_weight: 5.00
+  rate: 24.5
+  country_group: 4
+
+rule35:
+  id: 35
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 5.10 
+  to_weight: 6.00
+  rate: 26.35
+  country_group: 4
+
+rule36:
+  id: 36
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 6.10 
+  to_weight: 7.00
+  rate: 27.65
+  country_group: 4
+
+rule37:
+  id: 37
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 7.10 
+  to_weight: 8.00
+  rate: 29.25
+  country_group: 4
+
+rule38:
+  id: 38
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 8.10 
+  to_weight: 9.00
+  rate: 30.55
+  country_group: 4
+
+rule39:
+  id: 39
+  method: 'USPS GLOBAL ECONOMY PARCEL POST'
+  from_weight: 9.10 
+  to_weight: 10.00
+  rate: 31.9
+  country_group: 4
+

@@ -1,0 +1,31 @@
+# See LICENSE file in the root for details
+rule1:
+  id: 1
+  country: 'AUSTRALIA'
+  rate: 0
+
+rule2:
+  id: 2
+  country: 'CANADA'
+  rate: 0
+
+rule3:
+  id: 3
+  country: 'FRANCE'
+  rate: 0
+
+rule4:
+  id: 4
+  country: 'GERMANY'
+  rate: 0
+
+rule5:
+  id: 5
+  country: 'JAPAN'
+  rate: 0
+
+rule6:
+  id: 6
+  country: 'UNITED KINGDOM'
+  rate: 0
+

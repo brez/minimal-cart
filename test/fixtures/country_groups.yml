@@ -1,0 +1,25 @@
+# See LICENSE file in the root for details
+country1:
+  country: 'CANADA'
+  group_id: 1
+
+country2:
+  country: 'UNITED KINGDOM'
+  group_id: 3
+
+country3:
+  country: 'FRANCE'
+  group_id: 3
+
+country4:
+  country: 'GERMANY'
+  group_id: 3  
+
+country5:
+  country: 'JAPAN'
+  group_id: 4
+
+country6:
+  country: 'AUSTRAILIA'
+  group_id: 4
+

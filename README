@@ -1,0 +1,119 @@
+MinimalCart
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As the name implies, MinimalCart is very lightweight shopping cart plugin for Rails that leverages ActiveMerchant as a payment gateway. Why minimal? Implementing an entire off the shelf shopping cart system would inevitably restrict the use and configuration of you application, and / or force you to switch to such an application undermining the ability for you to simply 'add a cart system' to you existing application. With this in mind, MinimalCart assumes at least a basic understanding of building rails applications and is designed with the active developer in mind.
+
+All monetary values are stored in pennies to avoid float rounding errors
+
+
+INSTALL
+------------------------------------------------------
+./script/plugin install svn://rubyforge.org/var/svn/minimalcart
+
+GENERATE DATABASE
+------------------------------------------------------
+./script/generate minimal_cart MinimalCart
+rake db:migrate 
+
+CONFIGURE 
+------------------------------------------------------
+vi /vendor/plugins/minimal_cart/config/config.yml
+
+
+REFERENCE IN APP
+------------------------------------------------------
+In the controller of your choice simply add the reference:
+
+class ShopController < ApplicationController
+  include MinimalCart
+  miminal_cart
+  ...
+
+This will add all functionality to the controller
+
+EXTENDING PRODUCT 
+------------------------------------------------------
+MinimalCart comes with a basic Product model with the following attributes:
+
+:name
+:byline
+:description
+:price
+:weight
+
+Additional attributes can added by simply extending the Product model, e.g.
+
+class TwelveInchVinyl < Product 
+  validates_presence_of :sound_clip, :label, :origin
+  acts_as_taggable
+  attachment_fu
+end
+
+As implied above, images are deliberately left out for basic product in favor
+of your favorite __ plugin [such as attachment_fu]. Extending the Product model
+is, of course, a critical polymorphic requirement.  
+
+USING 
+------------------------------------------------------
+
+Once referenced in your controller, it now has the following methods:
+
+add_cart(id)
+remove_cart(id)
+update_cart(id, quantity)
+clear_cart
+
+
+CHECKING OUT
+------------------------------------------------------
+ At this point you will have to dig in and read / understand the included Billing and Customer Models since you will need to populate them in order to process your order [calling the get_billing method will return a Newly created Billing object with a Customer object as well]
+
+Once you've managed that you can retrieve the subtotal / total with the following methods:
+
+        subtotal_cart
+        total_cart
+      
+
+An when you are ready to process the transaction, ensure that you have set the Customer and Billing data using:
+
+        ship_to(customer)
+        bill_to(customer, billing)
+      
+
+and use the
+
+        process_card
+      
+
+method to process the card. At this point it's a good idea to store this entire transaction so you can come back to it at some point. This is accomplished by using the
+
+        check_out
+      
+
+This will create a ShoppingTransaction model, save it, and return it to you [or throw an assortment of exceptions if there's a problem].
+
+Transactions [minus the Billing information] are stored in the ShoppingTransaction persistence. One very important note is that manually destroy this information in the session after you have successfully completed a transaction:
+
+        session[:billing] = nil
+        session[:shipping] = nil
+
+
+TAX / SHIPPING NOTES
+------------------------------------------------------
+Both Tax and Shipping totals are supported with ShippingRate / CountryGroup and TaxRate models respectively. There are fixtures included with fairly recent rates from the USPS but will likely change. Again, like products themselves, it is assumed that the you will handle the interaction / setting / etc of these rates. Once set though, the MinimalTax and MinimalShipping modules will calculate the rates and include in the transaction. All shipping weights are in ounces.
+
+
+
+FAQs
+------------------------------------------------------
+But wait how do I add and manage my products? - by building your own interface to them, again this is beyond the scope of what MinimalCart is..
+
+Where did this come from? - MinimalCart was extracted from existing ecommerce application written in Ruby on Rails.
+
+Does MinimalCart store Credit Card info? - Definitely Not. Billing information IS stored in the session during the life of the transaction and it is very important that you destroy this information when done with it.
+
+Can I hire you to sort out a Cart System for my app? - Sure - john@endax.com
+
+
+
+(c)2007 ENDAX, LLC.
